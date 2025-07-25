@@ -1,8 +1,9 @@
+export const dynamic = 'force-dynamic';
+
 import React from 'react';
 import IncidentPlayer from './camponents/IncidentPlayer';
 import IncidentList from './camponents/IncidentList';
 import { fetchIncidents } from './services/api/incidents';
-
 
 const Page = async () => {
   let incidents = null;
@@ -10,6 +11,7 @@ const Page = async () => {
   try {
     incidents = await fetchIncidents();
   } catch (error) {
+    
     console.error("Dashboard data fetch failed:", error);
   }
 

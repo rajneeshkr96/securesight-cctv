@@ -7,4 +7,5 @@ export interface Incident {
 
 export interface Props {
   incident: Incident;
+  
 }
